@@ -24,28 +24,19 @@ client.on("message", (message) => {
 				description: `:satellite_orbital: Tu conexion es de ${ping} ms`
 			}});
 	}
-	if (command === prefix + 'ayuda') {
-		message.channel.send({embed: {
-			color: 10181046,
-      	author: {
-			name: "Aca te estoy ayudando en lo que necesites",
-			icon_url: "https://i.imgur.com/Lote53F.jpg"
-		},
-		fields: [{
-			name: ".Redes",
-			value: "Aca puedes ver las redes sociales de ImDuende_"
-		},
-		{
-			name: ".Conexion",
-			value: "Ver conexion en el discord de ImDuende_"
-		},
-		],
-		timestamp: new Date(),
-		footer: {
-		icon_url: client.user.avatarURL,
-		text: "Diseñado por mahada#0641"
-      }
-    }
+
+	if (command === 'ayuda') {
+		const embed = new Discord.RichEmbed()
+			.setAuthor('Aca tenes la ayuda necesaria', 'https://i.imgur.com/Lote53F.jpg')
+			.setDescription(''+args+'\n▔▔▔▔▔▔▔▔▔▔▔')
+			.addField('Opinión1', '1\u20e3 Si')
+			.addField('Opinión2', '2\u20e3 No')
+			.setColor(0xff4d4d)
+		.setTimestamp()
+	message.channel.send({embed})
+	}
+
+
 
 
 });
