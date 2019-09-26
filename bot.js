@@ -23,7 +23,7 @@ client.on("message", (message) => {
 				color: 7419530,
 				description: `:satellite_orbital: Tu conexion es de ${ping} ms`
 			}});
-		return
+		return;
 	}
 
 	if (command === 'ayuda') {
@@ -34,7 +34,7 @@ client.on("message", (message) => {
 			.setColor(0xff4d4d)
 			.setTimestamp()
 	message.channel.send({embed})
-	return
+	return;
 	}
 	if (command === 'redes') {
 		const embed = new Discord.RichEmbed()
@@ -45,7 +45,7 @@ client.on("message", (message) => {
 			.setColor(10181046)
 			.setTimestamp()
 	message.channel.send({embed})
-	return
+	return;
 	}
 
 
