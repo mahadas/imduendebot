@@ -29,8 +29,11 @@ client.on("message", (message) => {
 	if (command === 'ayuda') {
 		const embed = new Discord.RichEmbed()
 			.setAuthor('Aca tenes la ayuda necesaria', 'https://i.imgur.com/Lote53F.jpg')
-			.addField('.Redes', 'Mira las redes sociales de ImDuende_')
-			.addField('.Conexion', 'Mira tu conexion en el servidor')
+			.addField('!Redes', 'Mira las redes sociales de ImDuende_')
+			.addField('!Conexion', 'Mira tu conexion en el servidor')
+			.addField('!Youtube', 'Mira mi canal de youtube')
+			.addField('!Twitch', 'Mira mi canal de twitch')
+			.addField('!Twitter', 'Mira mi canal de twitter')
 			.setColor(0xff4d4d)
 			.setTimestamp()
 	message.channel.send({embed})
