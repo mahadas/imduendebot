@@ -73,7 +73,7 @@ client.on("message", (message) => {
 			.addField(' Twitter', '[  Click para redirigirse](https://twitter.com/ImDuende__)')
 			.setColor(1146986)		
 			.setTimestamp()
-			.setFooter("Desarrollado por mahada#0641", `client.user.avatarURL`)
+			.setFooter("Desarrollado por mahada#0641")
 	message.channel.send({embed})
 	return;
 	}
