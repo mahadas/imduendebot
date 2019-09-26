@@ -35,6 +35,7 @@ client.on("message", (message) => {
 			.addField('!Twitter', 'Mira mi canal de twitter')
 			.setColor(0xff4d4d)
 			.setTimestamp()
+			.setFooter("Desarrollado por mahada#0641")
 	message.channel.send({embed})
 	return;
 	}
@@ -46,6 +47,7 @@ client.on("message", (message) => {
 			.addField(' Twitter', '[  Click para redirigirse](https://twitter.com/ImDuende__)')
 			.setColor(15105570)
 			.setTimestamp()
+			.setFooter("Desarrollado por mahada#0641")			
 	message.channel.send({embed})
 	return;
 	}
@@ -55,6 +57,7 @@ client.on("message", (message) => {
 			.addField(' Twitch', '[  Click para redirigirse](https://twitch.tv/imduende__)')
 			.setColor(10181046)		
 			.setTimestamp()
+			.setFooter("Desarrollado por mahada#0641")		
 	message.channel.send({embed})
 	return;
 	}
@@ -64,6 +67,7 @@ client.on("message", (message) => {
 			.addField('Youtube', '[  Click para redirigirse](https://www.youtube.com/channel/UC6MP4GJim6NPPXm8V93JYcA)')
 			.setColor(15158332)		
 			.setTimestamp()
+			.setFooter("Desarrollado por mahada#0641")		
 	message.channel.send({embed})
 	return;
 	}
