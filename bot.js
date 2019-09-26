@@ -36,7 +36,15 @@ client.on("message", (message) => {
 	message.channel.send({embed})
 	return
 	}
-
+	if (command === 'redes') {
+		const embed = new Discord.RichEmbed()
+			.setAuthor('Aca tienes las rede sociales de ImDuende_', 'https://i.imgur.com/Lote53F.jpg')
+			.addField('Youtube', '[Click para redirigirse](https://www.youtube.com/channel/UC6MP4GJim6NPPXm8V93JYcA)')
+			.setColor(0xff4d4d)
+			.setTimestamp()
+	message.channel.send({embed})
+	return
+	}
 
 
 
