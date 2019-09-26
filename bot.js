@@ -6,8 +6,8 @@ client.on("ready", () => {
 	client.user.setPresence({
        status: "online",
        game: {
-           name: "!ayuda | UltraGen",
-           url: "https://youtube.com/c/FacuJM",
+           name: "!ayuda | ImDuende",
+           url: "https://www.youtube.com/channel/UC6MP4GJim6NPPXm8V93JYcA",
            type: "STREAMING"
        }
    });
