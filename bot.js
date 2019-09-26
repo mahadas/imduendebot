@@ -26,14 +26,13 @@ client.on("message", (message) => {
 	}
 
 	if (command === 'ayuda') {
-		const embed = new Discord.RichEmbed()
+		const xd = new Discord.RichEmbed()
 			.setAuthor('Aca tenes la ayuda necesaria', 'https://i.imgur.com/Lote53F.jpg')
-			.setDescription(''+args+'\n▔▔▔▔▔▔▔▔▔▔▔')
-			.addField('Opinión1', '1\u20e3 Si')
-			.addField('Opinión2', '2\u20e3 No')
+			.addField('.Redes', 'Mira las redes sociales de ImDuende_')
+			.addField('.Conexion', 'Mira tu conexion en el servidor')
 			.setColor(0xff4d4d)
-		.setTimestamp()
-	message.channel.send({embed})
+			.setTimestamp()
+	message.channel.send({xd})
 	}
 
 
