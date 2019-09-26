@@ -26,13 +26,13 @@ client.on("message", (message) => {
 	}
 
 	if (command === 'ayuda') {
-		const xd = new Discord.RichEmbed()
+		const embed = new Discord.RichEmbed()
 			.setAuthor('Aca tenes la ayuda necesaria', 'https://i.imgur.com/Lote53F.jpg')
 			.addField('.Redes', 'Mira las redes sociales de ImDuende_')
 			.addField('.Conexion', 'Mira tu conexion en el servidor')
 			.setColor(0xff4d4d)
 			.setTimestamp()
-	message.channel.send({xd})
+	message.channel.send({embed})
 	}
 
 
