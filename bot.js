@@ -45,7 +45,6 @@ client.on("message", (message) => {
 			.addField(' Twitch', '[  Click para redirigirse](https://twitch.tv/imduende__)')
 			.addField(' Twitter', '[  Click para redirigirse](https://twitter.com/ImDuende__)')
 			.setColor(15105570)
-			.setFooter('Desarrollado por mahada#0641');
 			.setTimestamp()
 	message.channel.send({embed})
 	return;
@@ -54,8 +53,7 @@ client.on("message", (message) => {
 		const embed = new Discord.RichEmbed()
 			.setAuthor('Aca tienes mi canal de TWITCH', 'https://i.imgur.com/Lote53F.jpg')
 			.addField(' Twitch', '[  Click para redirigirse](https://twitch.tv/imduende__)')
-			.setColor(10181046)
-			.setFooter('Desarrollado por mahada#0641');			
+			.setColor(10181046)		
 			.setTimestamp()
 	message.channel.send({embed})
 	return;
@@ -64,8 +62,7 @@ client.on("message", (message) => {
 		const embed = new Discord.RichEmbed()
 			.setAuthor('Aca tienes mi canal de YOUTUBE', 'https://i.imgur.com/Lote53F.jpg')
 			.addField('Youtube', '[  Click para redirigirse](https://www.youtube.com/channel/UC6MP4GJim6NPPXm8V93JYcA)')
-			.setColor(15158332)
-			.setFooter('Desarrollado por mahada#0641');			
+			.setColor(15158332)		
 			.setTimestamp()
 	message.channel.send({embed})
 	return;
@@ -74,8 +71,7 @@ client.on("message", (message) => {
 		const embed = new Discord.RichEmbed()
 			.setAuthor('Aca tienes mi canal de TWITTER', 'https://i.imgur.com/Lote53F.jpg')
 			.addField(' Twitter', '[  Click para redirigirse](https://twitter.com/ImDuende__)')
-			.setColor(1146986)
-			.setFooter('Desarrollado por mahada#0641');			
+			.setColor(1146986)		
 			.setTimestamp()
 	message.channel.send({embed})
 	return;
