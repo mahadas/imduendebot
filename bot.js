@@ -25,7 +25,6 @@ client.on("message", (message) => {
 			}});
 		return;
 	}
-
 	if (command === 'ayuda') {
 		const embed = new Discord.RichEmbed()
 			.setAuthor('Aca tenes la ayuda necesaria', 'https://i.imgur.com/Lote53F.jpg')
@@ -64,7 +63,7 @@ client.on("message", (message) => {
 	if (command === 'youtube') {
 		const embed = new Discord.RichEmbed()
 			.setAuthor('Aca tienes mi canal de YOUTUBE', 'https://i.imgur.com/Lote53F.jpg')
-			.addField(` Youtube`, '[  Click para redirigirse](https://www.youtube.com/channel/UC6MP4GJim6NPPXm8V93JYcA)')
+			.addField('Youtube', '[  Click para redirigirse](https://www.youtube.com/channel/UC6MP4GJim6NPPXm8V93JYcA)')
 			.setColor(15158332)
 			.setFooter('Desarrollado por mahada#0641');			
 			.setTimestamp()
@@ -82,10 +81,6 @@ client.on("message", (message) => {
 	return;
 	}
 });
-
-
-
-
 
 
 client.login(process.env.BOT_TOKEN);
