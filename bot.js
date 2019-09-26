@@ -42,14 +42,42 @@ client.on("message", (message) => {
 			.addField(` Youtube`, '[  Click para redirigirse](https://www.youtube.com/channel/UC6MP4GJim6NPPXm8V93JYcA)')
 			.addField(' Twitch', '[  Click para redirigirse](https://twitch.tv/imduende__)')
 			.addField(' Twitter', '[  Click para redirigirse](https://twitter.com/ImDuende__)')
-			.setColor(10181046)
+			.setColor(15105570)
+			.setFooter('Desarrollado por mahada#0641');
 			.setTimestamp()
 	message.channel.send({embed})
 	return;
 	}
-
-
-
+	if (command === 'twitch') {
+		const embed = new Discord.RichEmbed()
+			.setAuthor('Aca tienes mi canal de TWITCH', 'https://i.imgur.com/Lote53F.jpg')
+			.addField(' Twitch', '[  Click para redirigirse](https://twitch.tv/imduende__)')
+			.setColor(10181046)
+			.setFooter('Desarrollado por mahada#0641');			
+			.setTimestamp()
+	message.channel.send({embed})
+	return;
+	}
+	if (command === 'youtube') {
+		const embed = new Discord.RichEmbed()
+			.setAuthor('Aca tienes mi canal de YOUTUBE', 'https://i.imgur.com/Lote53F.jpg')
+			.addField(` Youtube`, '[  Click para redirigirse](https://www.youtube.com/channel/UC6MP4GJim6NPPXm8V93JYcA)')
+			.setColor(15158332)
+			.setFooter('Desarrollado por mahada#0641');			
+			.setTimestamp()
+	message.channel.send({embed})
+	return;
+	}
+	if (command === 'twitter') {
+		const embed = new Discord.RichEmbed()
+			.setAuthor('Aca tienes mi canal de TWITTER', 'https://i.imgur.com/Lote53F.jpg')
+			.addField(' Twitter', '[  Click para redirigirse](https://twitter.com/ImDuende__)')
+			.setColor(1146986)
+			.setFooter('Desarrollado por mahada#0641');			
+			.setTimestamp()
+	message.channel.send({embed})
+	return;
+	}
 });
 
 
