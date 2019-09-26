@@ -6,8 +6,8 @@ client.on("ready", () => {
 	client.user.setPresence({
        status: "online",
        game: {
-           name: "!ayuda | ImDuende",
-           url: "https://www.youtube.com/channel/UC6MP4GJim6NPPXm8V93JYcA",
+           name: "!ayuda | UltraGen",
+           url: "https://youtube.com/c/FacuJM",
            type: "STREAMING"
        }
    });
@@ -51,4 +51,4 @@ client.on("message", (message) => {
 
 
 
-client.login("NjI2NzU0NzMxMTU4NjY3MzAy.XYy1Rw.4uBU-_qjJM4wtJIvhpo2awPXtPU");
+client.login(process.env.BOT_TOKEN);
