@@ -23,6 +23,7 @@ client.on("message", (message) => {
 				color: 7419530,
 				description: `:satellite_orbital: Tu conexion es de ${ping} ms`
 			}});
+		return
 	}
 
 	if (command === 'ayuda') {
@@ -33,6 +34,7 @@ client.on("message", (message) => {
 			.setColor(0xff4d4d)
 			.setTimestamp()
 	message.channel.send({embed})
+	return
 	}
 
 
