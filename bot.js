@@ -39,7 +39,7 @@ client.on("message", (message) => {
 	if (command === 'redes') {
 		const embed = new Discord.RichEmbed()
 			.setAuthor('Aca tienes las rede sociales de ImDuende_', 'https://i.imgur.com/Lote53F.jpg')
-			.addField('Youtube', '[Click para redirigirse](https://www.youtube.com/channel/UC6MP4GJim6NPPXm8V93JYcA)')
+			.addField(`:yts: Youtube`, '[Click para redirigirse](https://www.youtube.com/channel/UC6MP4GJim6NPPXm8V93JYcA)')
 			.addField('Twitch', '[Click para redirigirse](https://twitch.tv/imduende__)')
 			.addField('Twitter', '[Click para redirigirse](https://twitter.com/ImDuende__)')
 			.setColor(10181046)
