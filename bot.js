@@ -28,7 +28,7 @@ client.on("message", (message) => {
 	if (message.content.startsWith(prefix + "mensaje")) {
 		message.delete();
 		let text = args.join(" ");
-		message.channel.sendEmbed(text);
+		message.channel.send(text);
 	}	
 	if (message.content.startsWith(prefix + "invasion")) {
 		message.delete();
