@@ -35,15 +35,9 @@ client.on("message", (message) => {
 	}	
 	if (message.content.startsWith(prefix + "followage")) {
 		let text = args.join(" ");
-        fetch('https://api.crunchprank.net/twitch/followage/brunenger/' + text + '?precision=3')
-   		.then(function(response){
-   	      // response is a json string
-        	return response.json();// convert it to a pure JavaScript object
-
-        	var xd = response.json()
-
-        	message.channel.send(xd);	
-   		})
+		const url = 'https://api.crunchprank.net/twitch/followage/brunenger/' + text + '?precision=3';
+		const responseData = fetch(url).then(response => response.json());
+        message.channel.send(responseData);	
 	}
 	if (message.content.startsWith(prefix + "invasion")) {
 
@@ -64,6 +58,8 @@ client.on("message", (message) => {
 
 	}
 });
+
+
 
 
 client.login(process.env.BOT_TOKEN);
