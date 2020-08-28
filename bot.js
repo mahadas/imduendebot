@@ -27,6 +27,7 @@ client.on("message", (message) => {
 	}
 	
 	if (command === 'pene') {
+		message.delete();
 		var ahora = new Date();	
 		var minuto = ahora.getUTCMinutes();  
 		var hora = ahora.getUTCHours() + 9;
