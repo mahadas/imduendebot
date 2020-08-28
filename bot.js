@@ -32,6 +32,22 @@ client.on("message", (message) => {
 			message.channel.send(text);
 		}
 	}	
+	if (message.content.startsWith(prefix + "followage")) {
+		let text = args.join(" ");
+		const url = 'https://api.crunchprank.net/twitch/followage/brunenger/' + text + '?precision=3';
+		fetchStatus()
+
+	
+function fetchStatus() {
+    return fetch(url)
+        .then(res => {
+            if(res.ok) return res;
+            else throw res.statusText;
+        })
+        .then(res => res.json())
+}		
+
+	}	
 	if (message.content.startsWith(prefix + "invasion")) {
 
 		message.delete();
