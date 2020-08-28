@@ -1,6 +1,5 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
-const prefix = "+"
 
 client.on("ready", () => {
 	client.user.setPresence({
@@ -25,30 +24,17 @@ client.on("message", (message) => {
 			}});
 		return;
 	}
-	if (command === 'invasion') {
-	     message.delete();
-		var ahora = new Date();
-		const embed = new Discord.RichEmbed()
-			.addField('Mañana: 16 Hora Argentina', '[  Click para redirigirse al canal de brunenger](https://www.twitch.tv/brunenger)')
-			.addField(' ')
-			.addField('Tiempo Actual: ${hora}h:${minuto}m:${segundo}s')
-			.setColor(15158332)		
-			.setTimestamp()
-			.setFooter("Desarrollado por mahada#0641")		
-	message.channel.send({embed})
-	return;
-
-	}	
+	
 	if (command === 'pene') {
+		var ahora = new Date();	
 		var embed = new Discord.RichEmbed()
-		.setAuthor('Song Queue',message.guild.iconURL) //<- optional
-		.addField(`Song Queue`,`z<asd`,true)
-		.addField(`Now Playing`,`asd`,true)
+		.setAuthor('Proxima Invasion',message.guild.iconURL) //<- optional
+		.addField(`Dia 28/08/2020`,`a las 16:00hs Argentina`,true)
+		.addField(`Hora Actual`,`${ahora}`,true)
 		.setTimestamp()
 		.setColor("#hexcode")
 		.setFooter(`${message.author.tag}`, message.author.avatarURL)
 		message.channel.sendEmbed(embed);
-
 	}
 });
 
