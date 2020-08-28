@@ -30,7 +30,7 @@ client.on("message", (message) => {
 		message.delete();
 		var ahora = new Date();	
 		var minuto = ahora.getUTCMinutes();  
-		var hora = ahora.getUTCHours() + 9;
+		var hora = ahora.getUTCHours() - 3;
 		var segundo = ahora.getUTCSeconds();		
 		var embed = new Discord.RichEmbed()
 		.setAuthor('Proxima Invasion',message.guild.iconURL) //<- optional
