@@ -13,7 +13,6 @@ client.on("ready", () => {
    });
 });
 
-
 client.on("message", (message) => {
 	const args = message.content.slice(prefix.length).trim().split(/ +/g);
 	const command = args.shift().toLowerCase();
@@ -25,29 +24,26 @@ client.on("message", (message) => {
 			}});
 		return;
 	}
-  if (command === "presente") {
-     message.delete();
-     var ahora = new Date();
-     var minuto = ahora.getUTCMinutes();  
-     var hora = ahora.getUTCHours() + 2;
-     var segundo = ahora.getUTCSeconds();
-     let mes = [`Enero`,`Febrero`,`Marzo`,`Abril`,`Mayo`,`Junio`,`Julio`,`Agosto`,`Septiembre`,`Octubre`,`Noviembre`,`Diciembre`];
-     let suffix = [`st`,`nd`,`rd`];
-     const exampleEmbed = new Discord.RichEmbed()
-	    .setColor('#0099ff')
-	    .setTitle('Add Jerseyetr')
-	    .setURL('xxxxxx')
-	    .setAuthor('Midnight Bot', 'image.png', 'https://xxxxxxxx.com')
-	    .setDescription('')
-	    .setThumbnail('imageFromGoogle.png')
-	    .addField('How to Gain Access to the Server', '1. Go to the Rules Section and read the rules \n2. Add XXXX on Steam. Link above \n3. Download and install our mods. Check the #information Channel for info')
-	    .addBlankField()
-	    .addField('Mods download:', 'https://xxxxxxxxx', true)
-	    .addField('how to install mods', 'https://xxxxxxx', true)
-	    .addField('Vote for our Server', 'https://xxxxx', true)
-	    .setImage('')
-	    .setTimestamp()
-	    .setFooter('Updated 5/20', 'https://imageFromGoogle.com');
+	if (command === 'invasion') {
+	     message.delete();
+		var ahora = new Date();
+		var minuto = ahora.getUTCMinutes();  
+		var hora = ahora.getUTCHours() + 2;
+		var segundo = ahora.getUTCSeconds();
+		let mes = [`Enero`,`Febrero`,`Marzo`,`Abril`,`Mayo`,`Junio`,`Julio`,`Agosto`,`Septiembre`,`Octubre`,`Noviembre`,`Diciembre`];
+		let suffix = [`st`,`nd`,`rd`];
+		const embed = new Discord.RichEmbed()
+			.setAuthor('La proxima invasion va a ser:', message.author.avatarURL)
+			.addField('Mañana: 16 Hora Argentina', '[  Click para redirigirse al canal de brunenger](https://www.twitch.tv/brunenger)')
+			.addField(' ')
+			.addField('Tiempo Actual: ${hora}h:${minuto}m:${segundo}s')
+			.setColor(15158332)		
+			.setTimestamp()
+			.setFooter("Desarrollado por mahada#0641")		
+	message.channel.send({embed})
+	return;
+	}	
+});
 
 channel.send(exampleEmbed);
   }
