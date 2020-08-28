@@ -42,19 +42,10 @@ client.on("message", (message) => {
             )
            .then(response => {
            	let apiData = response;
-           	message.channel.send(apidata)
-           	
-           }
+           	message.channel.send(apidata);
 
-	
-function fetchStatus() {
-    return fetch(url)
-        .then(res => {
-            if(res.ok) return res;
-            else throw res.statusText;
-        })
-        .then(res => res.json())
-}		
+
+    	  })
 
 	}	
 	if (message.content.startsWith(prefix + "invasion")) {
