@@ -28,13 +28,7 @@ client.on("message", (message) => {
 	if (command === 'invasion') {
 	     message.delete();
 		var ahora = new Date();
-		var minuto = ahora.getUTCMinutes();  
-		var hora = ahora.getUTCHours() + 2;
-		var segundo = ahora.getUTCSeconds();
-		let mes = [`Enero`,`Febrero`,`Marzo`,`Abril`,`Mayo`,`Junio`,`Julio`,`Agosto`,`Septiembre`,`Octubre`,`Noviembre`,`Diciembre`];
-		let suffix = [`st`,`nd`,`rd`];
 		const embed = new Discord.RichEmbed()
-			.setAuthor('La proxima invasion va a ser:', message.author.avatarURL)
 			.addField('Mañana: 16 Hora Argentina', '[  Click para redirigirse al canal de brunenger](https://www.twitch.tv/brunenger)')
 			.addField(' ')
 			.addField('Tiempo Actual: ${hora}h:${minuto}m:${segundo}s')
