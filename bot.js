@@ -41,8 +41,7 @@ client.on("message", (message) => {
                 `https://api.crunchprank.net/twitch/followage/brunenger/` + text + `?precision=3`
             )
            .then(response => {
-           	let apiData = response;
-           	message.channel.send(apidata);
+           	message.channel.send(response);
 
 
     	  })
