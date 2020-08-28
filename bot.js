@@ -28,14 +28,19 @@ client.on("message", (message) => {
 	
 	if (command === 'pene') {
 		var ahora = new Date();	
+		var minuto = ahora.getUTCMinutes();  
+		var hora = ahora.getUTCHours() + 9;
+		var segundo = ahora.getUTCSeconds();		
 		var embed = new Discord.RichEmbed()
 		.setAuthor('Proxima Invasion',message.guild.iconURL) //<- optional
 		.addField(`Dia 28/08/2020`,`a las 16:00hs Argentina`,true)
-		.addField(`Hora Actual`,`${ahora}`,true)
+		.addField(`Hora Actual`,`${hora}h:${minuto}m:${segundo}s ARG`,true)
 		.setTimestamp()
 		.setColor("#hexcode")
 		.setFooter(`${message.author.tag}`, message.author.avatarURL)
 		message.channel.sendEmbed(embed);
+		return
+
 	}
 });
 
