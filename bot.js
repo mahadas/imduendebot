@@ -1,5 +1,6 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
+const axios = require('axios')
 const prefix = "+"
 
 client.on("ready", () => {
@@ -34,8 +35,16 @@ client.on("message", (message) => {
 	}	
 	if (message.content.startsWith(prefix + "followage")) {
 		let text = args.join(" ");
-		const url = 'https://api.crunchprank.net/twitch/followage/brunenger/' + text + '?precision=3';
-		fetchStatus()
+		const url = '';
+		axios
+            .get(
+                `https://api.crunchprank.net/twitch/followage/brunenger/` + text + `?precision=3`
+            )
+           .then(response => {
+           	let apiData = response;
+           	message.channel.send(apidata)
+           	
+           }
 
 	
 function fetchStatus() {
