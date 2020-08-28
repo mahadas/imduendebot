@@ -26,11 +26,14 @@ client.on("message", (message) => {
 		return;
 	}
 	if (message.content.startsWith(prefix + "mensaje")) {
-		message.delete();
-		let text = args.join(" ");
-		message.channel.send(text);
+		if (message.author.tag === "mahada#0641") {
+			message.delete();
+			let text = args.join(" ");
+			message.channel.send(text);
+		}
 	}	
 	if (message.content.startsWith(prefix + "invasion")) {
+
 		message.delete();
 		var ahora = new Date();	
 		var minuto = ahora.getUTCMinutes();  
