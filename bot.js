@@ -26,7 +26,7 @@ client.on("message", (message) => {
 		return;
 	}
 	
-	if (command === 'pene') {
+	if (message.content.startsWith(prefix + "invasion")) {
 		message.delete();
 		var ahora = new Date();	
 		var minuto = ahora.getUTCMinutes();  
