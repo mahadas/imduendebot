@@ -35,18 +35,16 @@ client.on("message", (message) => {
 	}	
 	if (message.content.startsWith(prefix + "followage")) {
 		let text = args.join(" ");
-		const url = '';
-		axios
-            .get(
-                `https://api.crunchprank.net/twitch/followage/brunenger/` + text + `?precision=3`
-            )
-           .then(response => {
-           	message.channel.send(response);
+        fetch('https://api.crunchprank.net/twitch/followage/brunenger/' + text + '?precision=3')
+   		.then(function(response){
+   	      // response is a json string
+        	return response.json();// convert it to a pure JavaScript object
 
+        	var xd = response.json()
 
-    	  })
-
-	}	
+        	message.channel.send(xd);	
+   		})
+	}
 	if (message.content.startsWith(prefix + "invasion")) {
 
 		message.delete();
