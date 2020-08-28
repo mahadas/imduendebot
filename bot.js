@@ -25,27 +25,24 @@ client.on("message", (message) => {
 			}});
 		return;
 	}
-	if (command === "ausente") {
-	    if (message.channel.id === '621353649729306634') {
-	     message.delete();
-	     var ahora = new Date();
-	     var minuto = ahora.getUTCMinutes();  
-	     var hora = ahora.getUTCHours() + 2;
-	     var segundo = ahora.getUTCSeconds();
-	     let mes = [`Enero`,`Febrero`,`Marzo`,`Abril`,`Mayo`,`Junio`,`Julio`,`Agosto`,`Septiembre`,`Octubre`,`Noviembre`,`Diciembre`];
-	     let suffix = [`st`,`nd`,`rd`];
-	     const darpresente = new Discord.RichEmbed()
-	     .setTitle("Proxima Invasion:", 'https://i.imgur.com/FwiJzpS.png')
-	     .addField("Dia:", `  ${message.author}`)
-	     .addField(" ")   
-	     .addField("Hora:", `  ${hora}h:${minuto}m:${segundo}s - Hora España`)
-	     .addField("Dia:", `  ${ahora.getDate()} de ${mes[ahora.getMonth()]} de 2019 `)
-	     .setColor(15158332)
-	     .setThumbnail(message.author.avatarURL)
-	     .setFooter("Canal De Twitch: Brunenger", 'https://i.imgur.com/FwiJzpS.ng');
-	     client.channels.get('621353649729306634').send(darpresente);
-	      }
-  }   
+  if (command === "presente") {
+     message.delete();
+     var ahora = new Date();
+     var minuto = ahora.getUTCMinutes();  
+     var hora = ahora.getUTCHours() + 2;
+     var segundo = ahora.getUTCSeconds();
+     let mes = [`Enero`,`Febrero`,`Marzo`,`Abril`,`Mayo`,`Junio`,`Julio`,`Agosto`,`Septiembre`,`Octubre`,`Noviembre`,`Diciembre`];
+     let suffix = [`st`,`nd`,`rd`];
+     const darpresente = new Discord.RichEmbed()
+     .setTitle("Presente:", 'https://i.imgur.com/FwiJzpS.png')
+     .addField("Staff:", `  ${message.author}`)
+     .addField("Hora:", `  ${hora}h:${minuto}m:${segundo}s - Hora España`)
+     .addField("Dia:", `  ${ahora.getDate()} de ${mes[ahora.getMonth()]} de 2019 `)
+     .setColor(3066993)
+     .setThumbnail(message.author.avatarURL)
+     .setFooter("IP: play.heavenmc.es", 'https://i.imgur.com/FwiJzpS.png');
+     client.channels.get('621353649729306634').send(darpresente);
+  }
 
 });
 
