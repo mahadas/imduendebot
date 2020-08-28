@@ -37,7 +37,19 @@ client.on("message", (message) => {
 			.setFooter("Desarrollado por mahada#0641")		
 	message.channel.send({embed})
 	return;
+
 	}	
+	if (command === 'pene') {
+		var embed = new Discord.RichEmbed()
+		.setAuthor('Song Queue',message.guild.iconURL) //<- optional
+		.addField(`Song Queue`,`z<asd`,true)
+		.addField(`Now Playing`,`asd`,true)
+		.setTimestamp()
+		.setColor("#hexcode")
+		.setFooter(`${message.author.tag}`, message.author.avatarURL)
+		message.channel.sendEmbed(embed);
+
+	}
 });
 
 
