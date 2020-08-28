@@ -33,15 +33,23 @@ client.on("message", (message) => {
      var segundo = ahora.getUTCSeconds();
      let mes = [`Enero`,`Febrero`,`Marzo`,`Abril`,`Mayo`,`Junio`,`Julio`,`Agosto`,`Septiembre`,`Octubre`,`Noviembre`,`Diciembre`];
      let suffix = [`st`,`nd`,`rd`];
-     const darpresente = new Discord.RichEmbed()
-     .setTitle("Presente:", 'https://i.imgur.com/FwiJzpS.png')
-     .addField("Staff:", `  ${message.author}`)
-     .addField("Hora:", `  ${hora}h:${minuto}m:${segundo}s - Hora España`)
-     .addField("Dia:", `  ${ahora.getDate()} de ${mes[ahora.getMonth()]} de 2019 `)
-     .setColor(3066993)
-     .setThumbnail(message.author.avatarURL)
-     .setFooter("IP: play.heavenmc.es", 'https://i.imgur.com/FwiJzpS.png');
-     client.channels.get('621353649729306634').send(darpresente);
+     const exampleEmbed = new Discord.RichEmbed()
+	    .setColor('#0099ff')
+	    .setTitle('Add Jerseyetr')
+	    .setURL('xxxxxx')
+	    .setAuthor('Midnight Bot', 'image.png', 'https://xxxxxxxx.com')
+	    .setDescription('')
+	    .setThumbnail('imageFromGoogle.png')
+	    .addField('How to Gain Access to the Server', '1. Go to the Rules Section and read the rules \n2. Add XXXX on Steam. Link above \n3. Download and install our mods. Check the #information Channel for info')
+	    .addBlankField()
+	    .addField('Mods download:', 'https://xxxxxxxxx', true)
+	    .addField('how to install mods', 'https://xxxxxxx', true)
+	    .addField('Vote for our Server', 'https://xxxxx', true)
+	    .setImage('')
+	    .setTimestamp()
+	    .setFooter('Updated 5/20', 'https://imageFromGoogle.com');
+
+channel.send(exampleEmbed);
   }
 
 });
