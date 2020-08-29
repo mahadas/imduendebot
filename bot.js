@@ -58,12 +58,10 @@ client.on("message", (message) => {
 
 	}
 	if (message.content.startsWith(prefix + "diainvasion")) {
-		if (message.member.roles.equals("748677376136708160")) {
+		if (message.channel.id === '748690889710239884') {
 			let text = args.join(" ");
 			var diainvasion = text;
-	        message.channel.send('el dia de invasion se cambio a' + `${text}`);	
-
-
+	        message.channel.send('el dia de invasion se cambio a' + `${text}`);
 	}
 
 
