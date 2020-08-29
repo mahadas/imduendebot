@@ -48,7 +48,7 @@ client.on("message", (message) => {
 		var segundo = ahora.getUTCSeconds();		
 		var embed = new Discord.RichEmbed()
 		.setAuthor('Proxima Invasion',message.guild.iconURL) //<- optional
-		.addField(`Dia 28/08/2020`,`a las 16:00hs Argentina`,true)
+		.addField(`Dia ${diainvasion}`,`a las 16:00hs Argentina`,true)
 		.addField(`Hora Actual`,`${hora}h:${minuto}m:${segundo}s ARG`,true)
 		.setTimestamp()
 		.setColor("#hexcode")
@@ -57,6 +57,18 @@ client.on("message", (message) => {
 		return
 
 	}
+	if (message.content.startsWith(prefix + "diainvasion")) {
+		if (message.member.roles.equals("748677376136708160")) {
+			let text = args.join(" ");
+			var diainvasion = text;
+	        message.channel.send('el dia de invasion se cambio a' + `${text}`);	
+
+
+	}
+
+
+	}
+
 });
 
 
