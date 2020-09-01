@@ -27,12 +27,12 @@ client.on("message", (message) => {
 		return;
 	}
 	if (message.content.startsWith(prefix + "mensaje")) {
-		if (message.member.roles.get('748677376136708160'))
+		if (message.member.roles.get('748677376136708160')) {
 			message.delete();
 			let text = args.join(" ");
 			message.channel.send(text);
 		}
-	}	
+	}
 	if (message.content.startsWith(prefix + "followage")) {
 		let text = args.join(" ");
 		const url = 'https://api.crunchprank.net/twitch/followage/brunenger/' + text + '?precision=3';
