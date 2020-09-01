@@ -27,7 +27,7 @@ client.on("message", (message) => {
 		return;
 	}
 	if (message.content.startsWith(prefix + "mensaje")) {
-		if (message.author.tag === "mahada#0641") {
+		if (message.member.roles.get('748677376136708160'))
 			message.delete();
 			let text = args.join(" ");
 			message.channel.send(text);
