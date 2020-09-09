@@ -74,7 +74,27 @@ client.on("message", (message) => {
 			message.channel.sendEmbed(embed);							
 
 
-	}	
+	}
+	if (message.content.startsWith(prefix + "diapelicula")) {
+		if (message.channel.id === '748690889710239884') {
+			let text = args.join(" ");
+			var fechapelicula = text();
+	        message.channel.send('la pelicula se puso para el dia' + ` ${text}`);
+	}
+
+	if (message.content.startsWith(prefix + "pelicula")) {
+		let text = args.join(" ");
+		message.delete()
+		var embed = new Discord.RichEmbed()
+		.setAuthor(`Datos de la nueva pelicula`,message.guild.iconURL) //<- optional
+		.addField(`La nueva pelicula a ver sera`, `${text}` ,true)
+		.addField(`La fecha sera`, `${fechapelicula}` ,true)
+		.setTimestamp()
+		.setColor("#hexcode")
+		.setFooter(`${message.author.tag}`, message.author.avatarURL)
+		message.channel.sendEmbed(embed);
+	}
+
 	if (message.content.startsWith(prefix + "invasion")) {
 
 		message.delete();
@@ -93,6 +113,8 @@ client.on("message", (message) => {
 		return
 
 	}
+
+
 	if (message.content.startsWith(prefix + "diainvasion")) {
 		if (message.channel.id === '748690889710239884') {
 			let text = args.join(" ");
