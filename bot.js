@@ -42,8 +42,16 @@ client.on("message", (message) => {
 			fetch(url)
 			.then(response => response.text())
 			.then(data => {
-				message.channel.send(data);
+				var asd = data();
+				var embed = new Discord.RichEmbed()
+				.setAuthor(`Followage de ${text}`,message.guild.iconURL) //<- optional
+				.addField(`Lo sigue a brunenger desde`,`${asd}`,true)
+				.setTimestamp()
+				.setColor("#hexcode")
+				.setFooter(`${message.author.tag}`, message.author.avatarURL)
+				message.channel.sendEmbed(embed);				
 			})	
+
 		}
 
 	}	if (message.content.startsWith(prefix + "followage")) {
