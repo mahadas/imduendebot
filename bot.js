@@ -41,7 +41,13 @@ client.on("message", (message) => {
 			fetch(url)
 			.then(response => response.text())
 			.then(data => {
-				message.channel.send('El usuario ' + text + ' sigue a Brunenger hace ' + data)			
+				var embed = new Discord.RichEmbed()
+				.setAuthor(`Datos de ${text}`,message.guild.iconURL) //<- optional
+				.addField(`El usuario sigue a Brunenger hace`, data ,true)
+				.setTimestamp()
+				.setColor("#hexcode")
+				.setFooter(`${message.author.tag}`, message.author.avatarURL)
+				message.channel.sendEmbed(embed);							
 			})
 
 	}
