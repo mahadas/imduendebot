@@ -35,7 +35,6 @@ client.on("message", (message) => {
 		}
 	}
 	if (message.content.startsWith(prefix + "followage")) {
-			message.delete();
 			let text = args.join(" ");		
 			const url = "https://api.crunchprank.net/twitch/followage/brunenger/" + text + "?precision=3"
 			fetch(url)
