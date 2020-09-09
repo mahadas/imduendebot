@@ -38,9 +38,9 @@ client.on("message", (message) => {
 		if (message.member.roles.get('748677376136708160')) {
 			message.delete();
 			let text = args.join(" ");		
-			const url = "https://api.crunchprank.net/twitch/followage/brunenger/BRG_Mahada?precision=3"
+			const url = "https://api.crunchprank.net/twitch/followage/brunenger/" + text + "?precision=3"
 			fetch(url)
-			.then(response => response.json())
+			.then(response => response.text())
 			.then(data => {
 				message.channel.send(data);
 			})	
