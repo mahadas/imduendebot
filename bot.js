@@ -81,6 +81,7 @@ client.on("message", (message) => {
 			var fechapelicula = text();
 	        message.channel.send('la pelicula se puso para el dia' + ` ${text}`);
 	}
+}
 
 	if (message.content.startsWith(prefix + "pelicula")) {
 		let text = args.join(" ");
