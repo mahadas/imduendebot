@@ -33,7 +33,21 @@ client.on("message", (message) => {
 			message.channel.send(text);
 		}
 	}
-	if (message.content.startsWith(prefix + "followage")) {
+	if (message.content.startsWith(prefix + "asdasd")) {
+		if (message.member.roles.get('748677376136708160')) {
+			message.delete();
+			let text = args.join(" ");		
+			const url = "https://api.crunchprank.net/twitch/followage/brunenger/BRG_Mahada?precision=3"
+			fetch(url)
+			.then(response => response.json())
+			.then(data => {
+				var asd = data();
+			})
+			}
+			message.channel.send(asd);
+		}
+
+	}	if (message.content.startsWith(prefix + "followage")) {
 		let text = args.join(" ");
 		const url = 'https://api.crunchprank.net/twitch/followage/brunenger/' + text + '?precision=3';
 		const responseData = fetch(url).then(response => response.json());
