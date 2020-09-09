@@ -42,10 +42,8 @@ client.on("message", (message) => {
 			fetch(url)
 			.then(response => response.json())
 			.then(data => {
-				var asd = data();
-			})
-		
-			message.channel.send(asd);
+				message.channel.send(data);
+			})	
 		}
 
 	}	if (message.content.startsWith(prefix + "followage")) {
