@@ -43,7 +43,7 @@ client.on("message", (message) => {
 			.then(data => {
 				var asd = data();
 			})
-			}
+		
 			message.channel.send(asd);
 		}
 
