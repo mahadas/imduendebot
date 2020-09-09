@@ -57,12 +57,12 @@ client.on("message", (message) => {
 			fetch(url)
 			.then(response => response.text())
 			.then(data => {
-				var asd = data
+				var asd = data();
 			})		
 			fetch(url1)
 			.then(response => response.text())
 			.then(data => {
-				var asd1 = data
+				var asd1 = data();
 			})						
 			var embed = new Discord.RichEmbed()
 			.setAuthor(`Canal de brunenger`,message.guild.iconURL) //<- optional
