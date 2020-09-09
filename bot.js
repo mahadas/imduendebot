@@ -50,6 +50,31 @@ client.on("message", (message) => {
 			})
 
 	}
+	if (message.content.startsWith(prefix + "brunenger")) {
+			let text = args.join(" ");		
+			const url = "https://decapi.me/twitch/status?channel=" + text
+			const url1 = "https://decapi.me/twitch/uptime?channel=" + text
+			fetch(url)
+			.then(response => response.text())
+			.then(data => {
+				var asd = data
+			})		
+			fetch(url1)
+			.then(response => response.text())
+			.then(data => {
+				var asd1 = data
+			})						
+			var embed = new Discord.RichEmbed()
+			.setAuthor(`Canal de brunenger`,message.guild.iconURL) //<- optional
+			.addField(`Titulo Actual`, `${asd}` ,true)
+			.addField(`Horas Strimeadas`, `${asd1}` ,true)
+			.setTimestamp()
+			.setColor("#hexcode")
+			.setFooter(`${message.author.tag}`, message.author.avatarURL)
+			message.channel.sendEmbed(embed);							
+
+
+	}	
 	if (message.content.startsWith(prefix + "invasion")) {
 
 		message.delete();
