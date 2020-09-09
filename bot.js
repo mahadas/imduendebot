@@ -34,31 +34,16 @@ client.on("message", (message) => {
 			message.channel.send(text);
 		}
 	}
-	if (message.content.startsWith(prefix + "asdasd")) {
-		if (message.member.roles.get('748677376136708160')) {
+	if (message.content.startsWith(prefix + "followage")) {
 			message.delete();
 			let text = args.join(" ");		
 			const url = "https://api.crunchprank.net/twitch/followage/brunenger/" + text + "?precision=3"
 			fetch(url)
 			.then(response => response.text())
 			.then(data => {
-				var asd = data();
-				var embed = new Discord.RichEmbed()
-				.setAuthor(`Followage de ${text}`,message.guild.iconURL) //<- optional
-				.addField(`Lo sigue a brunenger desde`,`${asd}`,true)
-				.setTimestamp()
-				.setColor("#hexcode")
-				.setFooter(`${message.author.tag}`, message.author.avatarURL)
-				message.channel.sendEmbed(embed);				
-			})	
+				message.channel.send('El usuario ' + text + ' sigue a Brunenger hace ' + data)			
+			})
 
-		}
-
-	}	if (message.content.startsWith(prefix + "followage")) {
-		let text = args.join(" ");
-		const url = 'https://api.crunchprank.net/twitch/followage/brunenger/' + text + '?precision=3';
-		const responseData = fetch(url).then(response => response.json());
-        message.channel.send(responseData);	
 	}
 	if (message.content.startsWith(prefix + "invasion")) {
 
