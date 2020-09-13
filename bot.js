@@ -82,7 +82,7 @@ client.on("message", (message) => {
 	        message.channel.send('la pelicula se puso para el dia' + ` ${text}`);
 	}
 }
-	if (message.content.startsWith(prefix + apoyar)) {
+	if (message.content.startsWith(prefix + "apoyar")) {
 		message.delete()
 		message.channel.send('@everyone Vayan a twitter y apoyen poniendo #FREEBRUNENGER y den RT  a todos los tweets que estan apareciendo en mas recientes')
 
