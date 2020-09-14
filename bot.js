@@ -86,7 +86,7 @@ client.on("message", (message) => {
 	if (message.content.startsWith(prefix + "divertido")) {		
 		var embed = new Discord.RichEmbed()
 		.setAuthor(`Che que divertido`,message.guild.iconURL) //<- optional
-		.addField(`La verdad que esta re divertido el stream`, `espero que nunca acabe no ` + member.author.tag + '?' ,true)
+		.addField(`La verdad que esta re divertido el stream`, `espero que nunca acabe no ` + message.author.tag + '?' ,true)
 		.setTimestamp()
 		.setColor("#hexcode")
 		.setFooter(`${message.author.tag}`, message.author.avatarURL)
