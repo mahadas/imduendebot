@@ -75,6 +75,7 @@ client.on("message", (message) => {
 
 
 	}
+
 	if (message.content.startsWith(prefix + "diapelicula")) {
 		if (message.channel.id === '748690889710239884') {
 			let text = args.join(" ");
@@ -82,13 +83,16 @@ client.on("message", (message) => {
 	        message.channel.send('la pelicula se puso para el dia' + ` ${text}`);
 	}
 }
-	if (message.content.startsWith(prefix + "apoyar")) {
-		message.delete()
-		message.channel.send('@everyone Vayan a twitter y apoyen poniendo #FREEBRUNENGER y den RT  a todos los tweets que estan apareciendo en mas recientes')
-
+	if (message.content.startsWith(prefix + "divertido")) {		
+		var embed = new Discord.RichEmbed()
+		.setAuthor(`Che que divertido`,message.guild.iconURL) //<- optional
+		.addField(`La verdad que esta re divertido el stream`, `espero que nunca acabe no ` + member.author.tag + '?' ,true)
+		.setTimestamp()
+		.setColor("#hexcode")
+		.setFooter(`${message.author.tag}`, message.author.avatarURL)
+		message.channel.sendEmbed(embed);	
 	}
-
-	if (message.content.startsWith(prefix + "pelicula")) {
+ b  ,	if (message.content.startsWith(prefix + "pelicula")) {
 		let text = args.join(" ");
 		message.delete()
 		var embed = new Discord.RichEmbed()
