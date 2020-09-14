@@ -92,7 +92,7 @@ client.on("message", (message) => {
 		.setFooter(`${message.author.tag}`, message.author.avatarURL)
 		message.channel.sendEmbed(embed);	
 	}
- b  ,	if (message.content.startsWith(prefix + "pelicula")) {
+   	if (message.content.startsWith(prefix + "pelicula")) {
 		let text = args.join(" ");
 		message.delete()
 		var embed = new Discord.RichEmbed()
