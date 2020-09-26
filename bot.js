@@ -27,8 +27,8 @@ client.on("message", (message) => {
 			}});
 		return;
 	}
-	if (message.content.startsWith(prefix + "mensaje")) {
-		if (message.member.roles.get('748677376136708160')) {
+	if (command === 'mensaje') {
+		if (message.member.roles.get('759547774332305459')) {
 			message.delete();
 			let text = args.join(" ");
 			message.channel.send(text);
