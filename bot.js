@@ -34,7 +34,7 @@ client.on("message", (message) => {
 			message.channel.send(text);
 		}
 	}
-	if (message.content.startsWith(prefix + "followage")) {
+	if (command === 'followage') {
 			let text = args.join(" ");		
 			const url = "https://api.crunchprank.net/twitch/followage/brunenger/" + text + "?precision=3"
 			fetch(url)
@@ -50,7 +50,7 @@ client.on("message", (message) => {
 			})
 
 	}
-	if (message.content.startsWith(prefix + "followagecoscu")) {
+	if (command === 'followagecoscu') {
 			let text = args.join(" ");		
 			const url = "https://api.crunchprank.net/twitch/followage/coscu/" + text + "?precision=3"
 			fetch(url)
@@ -66,7 +66,7 @@ client.on("message", (message) => {
 			})
 
 	}	
-	if (message.content.startsWith(prefix + "followagefran")) {
+	if (command === 'followagefran') {
 			let text = args.join(" ");		
 			const url = "https://api.crunchprank.net/twitch/followage/frankkaster/" + text + "?precision=3"
 			fetch(url)
