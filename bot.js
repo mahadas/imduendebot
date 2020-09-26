@@ -50,6 +50,38 @@ client.on("message", (message) => {
 			})
 
 	}
+	if (message.content.startsWith(prefix + "followagecoscu")) {
+			let text = args.join(" ");		
+			const url = "https://api.crunchprank.net/twitch/followage/coscu/" + text + "?precision=3"
+			fetch(url)
+			.then(response => response.text())
+			.then(data => {
+				var embed = new Discord.RichEmbed()
+				.setAuthor(`Datos de ${text}`,message.guild.iconURL) //<- optional
+				.addField(`El usuario sigue a Coscu hace`, data ,true)
+				.setTimestamp()
+				.setColor("#hexcode")
+				.setFooter(`${message.author.tag}`, message.author.avatarURL)
+				message.channel.sendEmbed(embed);							
+			})
+
+	}	
+	if (message.content.startsWith(prefix + "followagefran")) {
+			let text = args.join(" ");		
+			const url = "https://api.crunchprank.net/twitch/followage/frankkaster/" + text + "?precision=3"
+			fetch(url)
+			.then(response => response.text())
+			.then(data => {
+				var embed = new Discord.RichEmbed()
+				.setAuthor(`Datos de ${text}`,message.guild.iconURL) //<- optional
+				.addField(`El usuario sigue a Frankkaster hace`, data ,true)
+				.setTimestamp()
+				.setColor("#hexcode")
+				.setFooter(`${message.author.tag}`, message.author.avatarURL)
+				message.channel.sendEmbed(embed);							
+			})
+
+	}	
 	if (message.content.startsWith(prefix + "brunenger")) {
 			let text = args.join(" ");		
 			const url = "https://decapi.me/twitch/status?channel=" + text
