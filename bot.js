@@ -19,6 +19,7 @@ client.on("ready", () => {
 client.on("message", (message) => {
 	const args = message.content.slice(prefix.length).trim().split(/ +/g);
 	const command = args.shift().toLowerCase();
+
 	if (command === 'conexion') {
 		let ping = Math.floor(message.client.ping);
 		message.channel.send({embed: {
@@ -50,6 +51,11 @@ client.on("message", (message) => {
 			})
 
 	}
+	if (message.channel.id === '756310874905378907') {
+		client.channels.get('759992232744189973').send(message.author.tag, message);
+	}
+
+
 	if (command === 'followagecoscu') {
 			let text = args.join(" ");		
 			const url = "https://api.crunchprank.net/twitch/followage/coscu/" + text + "?precision=3"
