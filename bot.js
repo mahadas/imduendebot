@@ -52,7 +52,8 @@ client.on("message", (message) => {
 
 	}
 	if (message.channel.id === '756310874905378907') {
-		client.channels.get('759992232744189973').send(`${message.author.tag}`);
+		let msg = message.author.send
+		client.channels.get('759992232744189973').send(`${message.author.tag}` + `${msg}`);
 	}
 
 
